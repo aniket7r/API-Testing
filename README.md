@@ -17,7 +17,7 @@
 - [How to use it](#how-to-use-it)
 - [Don't feel you aren't smart enough](#dont-feel-you-arent-smart-enough)
 - [A Note About Video Resources](#a-note-about-video-resources)
-- [Choose a Tool](#choose-your-tool)
+- [Choose a Tool](#choose-a-tool)
 - [Books for API Testing](#books-for-api-testing)
 - [Interview Prep Books](#interview-prep-books)
 - [What you won't see covered](#what-you-wont-see-covered)
