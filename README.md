@@ -23,6 +23,7 @@
 - [What you won't see covered](#what-you-wont-see-covered)
 
 
+### Topics of Study
 
 
 
@@ -119,5 +120,12 @@ Ask experts about this and attach some good interview book for api testing that 
 
 This guide focuses on practical API testing with Postman. It will not cover:
 - Server-side implementation details or architecture (e.g., how to build an API from scratch)
-- Advanced Postman scripting (beyond the basics)
 - Integration with other testing frameworks (e.g., Selenium, Cypress)
+
+
+
+
+## Let's Get Started
+
+![Let's get Started](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf778qkJKKp6KJ7AoYognXbTJv7ZMDWuE9_g&s) 
+
