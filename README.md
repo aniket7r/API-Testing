@@ -17,14 +17,12 @@
 - [How to use it](#how-to-use-it)
 - [Don't feel you aren't smart enough](#dont-feel-you-arent-smart-enough)
 - [A Note About Video Resources](#a-note-about-video-resources)
-- [Choose a Programming Language](#choose-a-programming-language)
-- [Books for Data Structures and Algorithms](#books-for-data-structures-and-algorithms)
+- [Choose a Tool](#choose-your-tool)
+- [Books for API Testing](#books-for-api-testing)
 - [Interview Prep Books](#interview-prep-books)
-- [Don't Make My Mistakes](#dont-make-my-mistakes)
-- [What you Won't See Covered](#what-you-wont-see-covered)
-- [The Daily Plan](#the-daily-plan)
-- [Coding Question Practice](#coding-question-practice)
-- [Coding Problems](#coding-problems)
+- [What you won't see covered](#what-you-wont-see-covered)
+
+
 
 
 
@@ -92,3 +90,34 @@ This guide is structured as an outline, with topics arranged in a logical order 
    git remote add upstream https://github.com/aniket7r/API-Testing.git
    git fetch --all
 
+
+## Don't feel you aren't smart enough
+
+ Add some motivation here for learners
+
+## A Note About Video Resources
+
+Attach video resouces here
+
+## Choose a Tool
+
+This guide will focus primarily on **Postman**, a powerful tool for API testing and automation. Postman allows you to create detailed API requests, run tests, automate workflows, and integrate with CI/CD pipelines. It’s a popular tool used in the industry, so mastering it will be valuable for your career.
+
+## Books for API Testing
+
+Attach some good books for api testing
+
+## Interview Prep Books
+
+You don't need to buy a bunch of these. "Cracking the coding Interview" is prolly enough for overall prepration and ...... for API Testing 
+- [Cracking the Coding Interview, 6th Edition](http://www.amazon.com/Cracking-Coding-Interview-6th-Programming/dp/0984782850/)
+    - Good for overall interview prepration
+
+Ask experts about this and attach some good interview book for api testing that they used.
+
+## What you won't see covered
+
+This guide focuses on practical API testing with Postman. It will not cover:
+- Server-side implementation details or architecture (e.g., how to build an API from scratch)
+- Advanced Postman scripting (beyond the basics)
+- Integration with other testing frameworks (e.g., Selenium, Cypress)
