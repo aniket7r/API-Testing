@@ -6,7 +6,7 @@
 > *Best of luck to you!*
 
 ---
-
+<index>
 ## Table of Contents
 
 ### The Study Plan
@@ -24,12 +24,19 @@
 
 
 ### Topics of Study
+#### API Overview
+- [What is API?](#what-is-api)
+- [What are HTTP methods?](#what-are-http-meathods)
+- [How API works?](#how-api-works)
+- [Types of API](#types-of-api)
+- [Common API architectural designs](#common-api-architectural-design)
 
 
 
 
 
 
+</index>
 
 
 
@@ -128,4 +135,60 @@ This guide focuses on practical API testing with Postman. It will not cover:
 ## Let's Get Started
 
 ![Let's get Started](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf778qkJKKp6KJ7AoYognXbTJv7ZMDWuE9_g&s) 
+
+## API Overview
+### What is API?
+- API stands for Application Programming Interface.
+- The word Application refers to any software with a distinct function.
+- Interface can be thought of as a contract of service between two applications.
+- This contract defines how the two communicate with each other using requests and responses.
+
+You can understand this as an API is like a waiter in a restaurant: the application (client) tells the waiter (API) what you want (request), and the waiter brings the food (response) from the kitchen (server).
+
+### What are HTTP methods?
+A set of actions that clients can perform on a resource using the HTTP protocol.
+HTTP is like a delivery service for the internet. It carries your requests (like ordering a package) to a server (the warehouse) and brings back responses (the package) to your browser.
+
+
+#### What do HTTP meathods do?
+- GET: Retrieves data from a resource 
+- POST: Creates a new resource or submits an entity to a resource 
+- PUT: Replaces an existing resource with an updated version 
+- DELETE: Removes a resource from a server 
+- HEAD: Requests a response similar to a GET request, but without a response body 
+- CONNECT: Creates a connection with a server-side resource, often a proxy server
+
+Later we will see them in detail, how they work.
+
+### How API works?
+Working of API is quite simple, you have an **Endpoint** which is a specific URL where you send the request, like a door to a resource. For example, /articles for everything related to articles.
+Add there are **Method** which are action you want to perform like:
+- GET to fetch data.
+- POST to add new data.
+- PUT to update data.
+- DELETE to remove data.
+You can also send extra information with the request, like filters or details (e.g., topic=tech to get only tech-related articles), these are called **Parameters**
+And for other extra content like authentication tokens or content type (e.g., JSON) in Key-value pairs, you can put them in **Headers**
+And finally **Body** where the actual data you send for creating or updating something, like the title and content of a new article.
+
+
+### Types of API
+Just for the knowledge, there are 3 types of APIs:
+- ***Private APIs***: Used within an organization to connect internal systems (e.g., login, feed, messaging). Not for third parties.
+
+- ***Public APIs***: Open to third-party developers for accessing data or services (e.g., Stripe for payments). Can be free or paid.
+
+- ***Partner APIs***: Shared between companies for collaboration, with strict access control (e.g., data exchange between two businesses).
+
+
+### Common API architectural designs
+- ***REST***: It's like navigating through different web pages with distinct URLs for each action (e.g., /user, /products). Each page does a specific job using simple HTTP methods (GET, POST).
+
+- ***SOAP***: Same as sending a structured form with specific fields (XML) to a server for processing. It’s secure and formal, but often slower and used in more complex systems.
+
+- ***GraphQL***: It is such as querying a search engine with exactly the data you need, all from a single search box. It saves time by getting everything in one request.
+
+- ***Webhooks***: Like subscribing to an update service that sends you a notification (HTTP request) when something specific happens (like a new message or payment).
+
+- ***gRPC***: Like connecting two systems over a high-speed, dedicated link, allowing them to communicate seamlessly and quickly, with defined protocols for faster data transfer.
 
