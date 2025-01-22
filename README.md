@@ -33,10 +33,10 @@
 
 #### Postman
 - [What is Postman](#what-is-postman)
-- [Postman Installationa and SetUp](#postman-install-&-setup)
 - [Key Tools in Postman](#key-tools-in-postman)
+- [Postman Installation and SetUp](#postman-install-setup)
 - [Get First Response from Postman](#first-respons-from-postman)
-
+- [Understanding Response](#understandig-response)
 
 
 
@@ -210,3 +210,52 @@ Now, let's learn about basics of Postman and get our first response from Postman
 
 ### What is Postman
 Postman is a powerful collaboration platform for API development and testing. It have a user-friendly interface to create, test, debug, document, and monitor APIs. Postman is widely used by developers and QA teams due to its ease of use, automation capabilities, and robust toolset for managing the entire API lifecycle.
+
+
+### Key Tools in Postman
+
+*   **Collections**: Group and organize your API requests for better management and sharing. Like you can group all ```/user``` endpoints (GET, POST, DELETE) in one folder to test user-related APIs.
+    
+*   **Environment Variables**: Use placeholders like ```{{base_url}}``` for dynamic values across requests. Use ```{{base\_url}}``` to switch between ```https://dev.api.com``` and ```https://prod.api.com```.
+    
+*   **Pre-request Scripts**: Automate tasks like generating tokens or setting variables before sending a request. You can auto-generate JWT tokens for authentication before sending a request.
+    
+*   **Tests Tab**: Write assertions (e.g., check status codes, response data) to validate API behavior. For example validate response.status is 200 and data.name equals "John Doe" after a GET request.
+    
+*   **Mock Servers**: Simulate APIs for testing without waiting for the real backend. Simulate the ```/orders``` API to test frontend while the backend is still in development.
+    
+*   **Monitor**: Schedule automated API tests to track performance and uptime. Like checking the ```/health``` endpoint hourly to ensure the API is running.
+    
+*   **Runner**: Run multiple requests or collections in a sequence for automation. Testing a collection with 100 requests to validate bulk user creation but you have other good tools for this purpose like JMeter.
+    
+*   **Visualize**: Create custom charts and graphs for response data analysis.
+    
+*   **API Documentation**: Auto-generate docs to share API details with your team.
+
+### Postman Installation and SetUp
+
+Visit Postman [official website](https://learning.postman.com/docs/getting-started/installation/installation-and-updates/) and Install on you system.
+
+### Get First Response from Postman
+1. **Open Postman**: Download and open Postman if not installed.
+2. **Create a New Request**: Click + or "New" to open a new request tab.
+![click-new](image/select +.png)
+3. **Set the Request Method**: Select GET from the dropdown next to the URL bar.
+![select-meathod](image/select-meathod.png)
+4. **Enter the Endpoint**: Type or paste https://catfact.ninja/fact in the URL bar.
+5. **Send the Request**: Click the Send button.
+6. **View the Response**: Check the response body below for a random cat fact.
+
+### Understanding Response
+
+![response1](image/response1.png)
+Let's understand the response that you got.
+1. **HTTP Status Code**: Here you got 200 code which means the request was successful (OK). You can check other http codes on this [wiki page](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+2. **Response Time**: Time taken for the server to respond.
+3. **Response Data**: The actual data sent back, usually in JSON format (e.g., cat facts).
+4. **Server-sent events**: Body, Cookies, Headers, Test Results
+   *Body*: The main content of the response (e.g., fact).
+   *Cookies*: Cookies are like small notes the server gives the client to remember info for future requests (e.g., user sessions).
+   *Headers*: Metadata about the response, like content type (JSON) or server info.
+   *Test Cases*: Displays results of any tests written for the request.
+5. *Data type selector*:  Lets you switch how the response data is displayed, based on its format. *(JSON, XML, HTML, RAW, ...)*
