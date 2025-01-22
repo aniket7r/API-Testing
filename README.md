@@ -263,7 +263,7 @@ Let's understand the response that you got.
 5. *Data type selector*:  Lets you switch how the response data is displayed, based on its format. *(JSON, XML, HTML, RAW, ...)*
 
 
-> Yay!! now you got your first api response using postman and also understands the rsponse.
+> Yay!! now you got your first api response using postman and also understands the responses.
 
 ---
 
