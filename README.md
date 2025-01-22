@@ -31,6 +31,11 @@
 - [Types of API](#types-of-api)
 - [Common API architectural designs](#common-api-architectural-design)
 
+#### Postman
+- [What is Postman](#what-is-postman)
+- [Postman Installationa and SetUp](#postman-install-&-setup)
+- [Key Tools in Postman](#key-tools-in-postman)
+- [Get First Response from Postman](#first-respons-from-postman)
 
 
 
@@ -198,4 +203,10 @@ Just for the knowledge, there are 3 types of APIs:
 
 - ***gRPC***: Like connecting two systems over a high-speed, dedicated link, allowing them to communicate seamlessly and quickly, with defined protocols for faster data transfer.
 
-That was 
+That was all the APIs basics you needed.
+Now, let's learn about basics of Postman and get our first response from Postman.
+
+## Postman basics
+
+### What is Postman
+Postman is a powerful collaboration platform for API development and testing. It have a user-friendly interface to create, test, debug, document, and monitor APIs. Postman is widely used by developers and QA teams due to its ease of use, automation capabilities, and robust toolset for managing the entire API lifecycle.
