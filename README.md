@@ -144,6 +144,10 @@ This guide focuses on practical API testing with Postman. It will not cover:
 - This contract defines how the two communicate with each other using requests and responses.
 
 You can understand this as an API is like a waiter in a restaurant: the application (client) tells the waiter (API) what you want (request), and the waiter brings the food (response) from the kitchen (server).
+You can try this api which sends list of universities in response, just copy it and paste on your browser search:
+```
+http://universities.hipolabs.com/search?country=United+States
+```
 
 ### What are HTTP methods?
 A set of actions that clients can perform on a resource using the HTTP protocol.
@@ -192,3 +196,4 @@ Just for the knowledge, there are 3 types of APIs:
 
 - ***gRPC***: Like connecting two systems over a high-speed, dedicated link, allowing them to communicate seamlessly and quickly, with defined protocols for faster data transfer.
 
+That was 
