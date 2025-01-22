@@ -31,12 +31,12 @@
 - [Types of API](#types-of-api)
 - [Common API architectural designs](#common-api-architectural-design)
 
-#### Postman
+#### Postman Basics
 - [What is Postman](#what-is-postman)
 - [Key Tools in Postman](#key-tools-in-postman)
-- [Postman Installation and SetUp](#postman-install-setup)
-- [Get First Response from Postman](#first-respons-from-postman)
-- [Understanding Response](#understandig-response)
+- [Postman Installation and SetUp](#postman-installation-and-setup)
+- [Get First Response from Postman](#get-first-response-from-postman)
+- [Understanding Response](#understanding-response)
 
 
 
@@ -206,6 +206,8 @@ Just for the knowledge, there are 3 types of APIs:
 That was all the APIs basics you needed.
 Now, let's learn about basics of Postman and get our first response from Postman.
 
+---
+
 ## Postman basics
 
 ### What is Postman
@@ -253,9 +255,15 @@ Let's understand the response that you got.
 1. **HTTP Status Code**: Here you got 200 code which means the request was successful (OK). You can check other http codes on this [wiki page](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 2. **Response Time**: Time taken for the server to respond.
 3. **Response Data**: The actual data sent back, usually in JSON format (e.g., cat facts).
-4. **Server-sent events**: Body, Cookies, Headers, Test Results
+4. **Server-sent events**: Body, Cookies, Headers, Test Results.
    *Body*: The main content of the response (e.g., fact).
    *Cookies*: Cookies are like small notes the server gives the client to remember info for future requests (e.g., user sessions).
    *Headers*: Metadata about the response, like content type (JSON) or server info.
    *Test Cases*: Displays results of any tests written for the request.
 5. *Data type selector*:  Lets you switch how the response data is displayed, based on its format. *(JSON, XML, HTML, RAW, ...)*
+
+
+> Yay!! now you got your first api response using postman and also understands the rsponse.
+
+---
+
