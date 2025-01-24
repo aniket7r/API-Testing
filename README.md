@@ -42,7 +42,7 @@
 
 #### Manual API Testing
 -[Postman Collection and Variables](#postman-collection-and-variables)
-
+-[Query Parameters](#query-parameters)
 
 
 
@@ -341,6 +341,26 @@ So if you share this collection with your team or your buddy, they'll only see t
 * In your "API Status" request, replace the full URL with {{baseUrl}}/status.
 * Hover over the variable to confirm it shows the correct API URL.
 
+
 **Test It:** Hit Send again. The response should be the same as before—Postman swaps the variable with the actual value.
 
+
+
+### Query Parameters
+Query parameters are like filters you add to the URL to customize your request, like ?page=2&limit=10 to get the second page of 10 items.
+
+Now let me take you step-by-step to practice query parameters in Postman using the ```/books``` endpoint.
+
+* Paste the base URL: ```{{baseUrl}}/books```.
+* Click Save at the top.
+   * Name it List of Books.
+   * Choose your collection (e.g., Simple Books API) and save it there.
+* Go to the Params tab below the URL bar.
+* In the **Key** field, type ```type```.
+* In the **Value** field, type ```fiction```.
+* Observe that the URL updates to:
+   ```{{baseUrl}}/books?type=fiction```
+Click Send to filter the results to only show books of type ```fiction```.
+
+***NOTE***: Query parameters are case-sensitive.
 
