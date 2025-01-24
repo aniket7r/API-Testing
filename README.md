@@ -45,6 +45,8 @@
 - [Query Parameters](#query-parameters)
 - [Path Variables](#path-variables)
 - [API Authentication](#api-authentication)
+- [Random Variables](#random-variables)
+
 
 
 
@@ -398,3 +400,18 @@ See, POST request is sending data to create or update a resource (e.g., adding a
 * Go to your Postman collection's environment settings, add a variable ```access_token```, and paste the token as the current value (do not use the initial value to keep the token private).
 * In your API request, add an Authorization header with the value Bearer {{access_token}}.
 * Now try again the **POST** request to ```/orders``` endpoint.
+
+### Random Variables
+Random variables in Postman generate dynamic values (e.g., ```{{$randomInt}}``` or ```{{$randomEmail}}```) for testing APIs with unique, unpredictable data in each request.
+
+Look for fields in your request body or headers where randomization can help. Examples include customer_name, email, or book_id.
+
+* In the ***Body*** tab replace hardcoded values (like "John") with Postman's random variables using double curly braces (```{{}}```) and the $random keyword.
+   ```JSON
+   {
+      "book_id": "{{randomInt}}",
+      "customer_name": "{{randomFullName}}",
+      "email": "{{randomEmail}}",
+      "quantity": "{{randomInt}}"
+   }
+   ```
