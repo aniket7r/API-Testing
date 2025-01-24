@@ -41,8 +41,10 @@
 
 
 #### Manual API Testing
--[Postman Collection and Variables](#postman-collection-and-variables)
--[Query Parameters](#query-parameters)
+- [Postman Collection and Variables](#postman-collection-and-variables)
+- [Query Parameters](#query-parameters)
+- [Path Variables](#path-variables)
+- [API Authentication](#api-authentication)
 
 
 
@@ -364,3 +366,35 @@ Click Send to filter the results to only show books of type ```fiction```.
 
 ***NOTE***: Query parameters are case-sensitive.
 
+### Path Variables
+Path variables are placeholders in the URL (e.g., ```/user/{{userId}}```) that you replace with actual values when making requests.
+
+So what is difference between Path Variables and Query Parameters?
+Path Variables are part of the URL path and change with each request (e.g., ```/books/1```) whereas Query Parameters are additional key-value pairs that appear after the URL path, usually starting with a ? (e.g., ````/books?type=fiction```).
+Path variables identify specific resources, while query parameters are used to filter or modify the results.
+
+### API Authentication
+
+See, POST request is sending data to create or update a resource (e.g., adding a new user with a JSON payload). For this you ned API Authentication which verifies your identity using tokens, keys, or credentials to secure access to the API.
+
+* Make a **POST** request to ```/orders``` endpoint.
+   Some endpoints (like ```/orders```) require authentication to create data (like submitting an order). These APIs expect a valid token to confirm your identity.Some endpoints (like /orders) require authentication to create data (like submitting an order). These APIs expect a valid token to confirm your identity.
+   When you receive 401 Unauthorized, know that it means authentication is required.
+   Before making requests to protected endpoints like submitting an order, you need to register your client (your Postman setup) to obtain an access token. 
+* Make a **POST** request to ```/api-clients``` endpoint.
+   The request body needs to be in JSON format and include the following properties:
+
+   clientName - String
+   clientEmail - String
+
+   Use these credentials:
+   ```JSON
+   {
+      "clientName": "Postman",
+      "clientEmail": "valentin@example.com"
+   }
+   ```
+* Copy the access token from the response.
+* Go to your Postman collection's environment settings, add a variable ```access_token```, and paste the token as the current value (do not use the initial value to keep the token private).
+* In your API request, add an Authorization header with the value Bearer {{access_token}}.
+* Now try again the **POST** request to ```/orders``` endpoint.
