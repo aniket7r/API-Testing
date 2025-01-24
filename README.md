@@ -24,6 +24,7 @@
 
 
 ### Topics of Study
+
 #### API Overview
 - [What is API?](#what-is-api)
 - [What are HTTP methods?](#what-are-http-meathods)
@@ -37,6 +38,23 @@
 - [Postman Installation and SetUp](#postman-installation-and-setup)
 - [Get First Response from Postman](#get-first-response-from-postman)
 - [Understanding Response](#understanding-response)
+
+
+#### Manual API Testing
+-[Postman Collection and Variables](#postman-collection-and-variables)
+
+
+
+
+
+
+#### API Test Automation
+
+
+
+
+#### API Test Automation (Advance)
+
 
 
 
@@ -266,4 +284,63 @@ Let's understand the response that you got.
 > Yay!! now you got your first api response using postman and also understands the responses.
 
 ---
+
+## Manual API Testing
+> In this section we will dive into the ***POSTMAN tools*** and will learn to do ***manual API testing***.
+
+### Postman Collection and Variables
+
+#### Collection 
+
+You've got this request with the API address, and you wanna keep it for later.
+But Postman's like, “Nah, you can't save it directly!” Why? You need a collection first.
+
+Think of a collection as your music playlist, but for API requests. Each collection holds requests tied to the same API or use case. So, create one for the Simple Books API:
+
+1. Click ***Create Collection***, name it something cool like ```"Simple Books API"```.
+2. Hit the checkmark ✅, and boom, now your ```"API Status"``` request is saved in this collection.
+
+Later, when you wanna revisit the request, just click it in the Collections tab. The tab opens, and you are back in action!
+
+Let's get our hands dirty.
+* Open Postman and create a GET request to ```https://simple-books-api.glitch.me/status```.
+* Now, click the Save button at the top.
+   * Name your request "API Status".
+   * Notice the Save button is disabled because you need a collection.
+* Click on Create Collection when prompted.
+* Name it "Simple Books API" (or something cool).
+* Hit the checkmark ✅ to finalize it.
+* Save your "API Status" request into this collection.
+
+**Test It:** Close the request tab and open it again by selecting it from the Collections tab.
+
+
+#### Variables
+
+You don't wanna hardcode the API address every time because if something changes, you'd need to fix it everywhere. Instead, replace it with a variable:
+
+1. ighlight the API address.
+2. Click Set as Variable → Set as New Variable.
+3. Name it something obvious like baseUrl (because all requests will start here).
+
+Postman lets you save variables in different scopes (like layers of access). For now:
+
+Choose Collection Scope to keep the variable tied to your Simple Books API collection.
+Postman replaces the address with ```{{baseUrl}}``` (double curly braces). Clean, right? Hover over it to see the actual value.
+
+Variables in Postman have two values:
+Initial Value: Shared with others when you share the collection. Perfect for public APIs.
+Current Value: Private to you, great for keeping secrets like tokens.
+So if you share this collection with your team or your buddy, they'll only see the Initial Value. But when you send the request, Postman uses the Current Value.
+
+* Highlight the API URL (https://simple-books-api.glitch.me).
+* Click Set as Variable → Set as New Variable.
+* Name the variable baseUrl (because this is your API’s base address).
+* Set the value to https://simple-books-api.glitch.me (no trailing slash).
+* Choose Collection Scope so the variable is tied to your collection.
+* In your "API Status" request, replace the full URL with {{baseUrl}}/status.
+* Hover over the variable to confirm it shows the correct API URL.
+
+**Test It:** Hit Send again. The response should be the same as before—Postman swaps the variable with the actual value.
+
 
